@@ -1,1 +1,1 @@
-print("🚀 Hello from Docker container!, this is to test the trigger")
+print("🚀 Hello from Docker container!")
