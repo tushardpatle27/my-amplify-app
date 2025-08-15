@@ -1,8 +1,14 @@
 name : my-first-workflow
-on : push
-jobs :
-  demo :
-    runs-on : ubuntu-latest
-    steps :
-      - name : Run hello World
-        run : echo "Hello from github actions"
+on :
+  push :
+  branches : ["main"]
+    jobs :
+      demo :
+        runs-on : ubuntu-latest
+        steps :
+          - name : Run hello World
+            run : echo "Hello from github actions"
+          - name : checkout repo
+            uses : actions/checkout@v4
+          - name : Show date
+            run : date
